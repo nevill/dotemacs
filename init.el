@@ -76,7 +76,11 @@
 
 ;;default live packs
 ; powerline.el in core will re-draw mode line, "themes" also does it, put "themes" ahead
-(setq live-packs '("themes" "core"))
+(setq live-packs '(
+                   "themes"
+                   "core"
+                   )
+)
 
 ;; Load all packs - Power Extreme!
 (live-load-all-packs live-packs)
