@@ -24,3 +24,7 @@
 
 ;; Always have cursor above a number of lines from bottom
 (setq scroll-margin 8)
+
+;; yaml-mode.el from https://github.com/yoshiki/yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
