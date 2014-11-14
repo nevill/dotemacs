@@ -28,3 +28,8 @@
 ;; yaml-mode.el from https://github.com/yoshiki/yaml-mode
 (autoload 'yaml-mode "yaml-mode" "Major mode for editing Yaml" t)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;; php-mode.el from https://github.com/ejmr/php-mode
+(autoload 'php-mode "php-mode" "Major mode for editing PHP" t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
