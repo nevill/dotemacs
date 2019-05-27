@@ -20,9 +20,9 @@
 ;; Line-wrapping
 (set-default 'fill-column 72)
 
-(custom-set-variables
- '(term-default-bg-color "#000000")  ;; background color (black)
- '(term-default-fg-color "#dddd00")) ;; foreground color (yellow)
+;(custom-set-variables
+; '(term-default-bg-color "#000000")  ;; background color (black)
+; '(term-default-fg-color "#dddd00")) ;; foreground color (yellow)
 
 
 ;; Cursor-type

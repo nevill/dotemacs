@@ -33,3 +33,12 @@
 (autoload 'php-mode "php-mode" "Major mode for editing PHP" t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+
+;; js2-mode
+
+(autoload 'js2-mode "js2-mode" "Major mode for Javascript" t)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+(add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
+;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
+;(add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))

@@ -1,4 +1,19 @@
 ;; Store live base dirs
+
+(tool-bar-mode 0)
+; (global-linum-mode t) ;侧边显示行号
+(column-number-mode t) ;状态栏显示行列信息
+(show-paren-mode t) ;括号匹配高亮
+;(global-hl-line-mode 1) ;当前行高亮
+
+(require 'package)
+(package-initialize)
+(add-to-list 'package-archives
+  '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(when (not package-archive-contents)
+  (package-refresh-contents)
+)
+
 (setq live-root-dir (file-name-directory
                      (or buffer-file-name load-file-name)))
 
@@ -84,3 +99,18 @@
 
 ;; Load all packs - Power Extreme!
 (live-load-all-packs live-packs)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (go-mode js2-mode sml-mode)))
+ '(term-default-bg-color "#000000")
+ '(term-default-fg-color "#dddd00"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(mode-line ((t (:foreground "#FFAD34" :background "#3174BA" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
